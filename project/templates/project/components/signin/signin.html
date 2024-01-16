@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./signin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    {% comment %} <input type="checkbox" id="click">
+    <div class="main-container">
+        <div class="form-container">
+            
+            <div class="sign-in">
+                <form action="#">
+                    <h1>SIGN IN</h1>
+                    <input type="email" placeholder="Matric Number" />
+                    <input type="password" placeholder="Password" />
+                    <div id="password-strength"></div>
+                    <a href="#" class="fogot-pass">Forgot your password?</a>
+                    <a href="../Dashboard/dashboard.html"><button type="button"> <span></span> Sign In</button></a>
+                </form>
+            </div>
+
+            <div class="sign-up"> {% endcomment %}
+                <!-- <form action="#">
+                    <h1>SIGN-UP</h1>
+                    <input type="text" placeholder="Name" />
+                    <input type="text" placeholder="College" />
+                    <input type="text" placeholder="Matric Number" />
+                    <input type="text" placeholder="Department" />
+                    <input type="email" placeholder="Email" />
+                    <input type="password" placeholder="Password" />
+                    <button>Sign Up</button>
+                </form> -->
+                {% if form.errors %}
+                    <p style="color: red;">There was an error with your submission. Please correct the errors below.</p>
+                {% endif %}
+
+                <!-- Display the form -->
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Signin</button>
+                </form>
+            {% comment %} </div>
+        </div>
+        
+        <div class="slide-container">
+            <div class="slide-panel">
+                <div class="slide-left">
+                    <h1>Welcome Back To School</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <label for="click" class="slide">Sign Up</label>   
+                </div>
+                <div class="slide-right">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <label for="click" class="slide">Sign In</label>
+                </div>
+            </div>
+        </div>
+
+    </div> {% endcomment %}
+
+<script src="./signin.js" defer></script>
+</body>
+</html>
